@@ -1,14 +1,19 @@
-function makeTransaction(quantity, pricePerDroid) {
+const categoriesItem = document.querySelectorAll('.item');
 
-    const totalPrice = quantity * pricePerDroid;
+const allList = document.querySelectorAll('#categories');
 
-    return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
-}
+allList.style.listStyleType = 'none';
 
-console.log(makeTransaction(5, 3000)); 
-
-console.log(makeTransaction(3, 1000));
-
-console.log(makeTransaction(10, 500));
+// categoriesItem.style.backgroundColor = '#f6f6fe';
 
 
+console.log(`Number of categories ${categoriesItem.length}`);
+
+
+categoriesItem.forEach(categories => {
+    const title = categories.querySelector('h2').textContent;
+    const categoriesCount = categories.querySelectorAll('li').length;
+
+    console.log(`Category: ${title}`);
+    console.log(`Elements: ${categoriesCount}`);
+});
