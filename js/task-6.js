@@ -16,7 +16,7 @@ createBtn.addEventListener("click", function () {
     return;
   }
   boxesContainer.innerHTML = "";
-  
+  const fragment = document.createDocumentFragment();
   let size = 30;
 
 for (let i = 0; i < amound; i++) {
@@ -25,9 +25,10 @@ for (let i = 0; i < amound; i++) {
   box.style.height = size + "px";
   box.style.backgroundColor = getRandomHexColor();
   box.style.margin = "5px";
-  boxesContainer.appendChild(box);
+  fragment.appendChild(box);
   size += 10;
 }
+  boxesContainer.appendChild(fragment);
   input.value = "";
 })
 
