@@ -19,18 +19,18 @@ createBtn.addEventListener("click", function () {
   const fragment = document.createDocumentFragment();
   let size = 30;
 
-for (let i = 0; i < amound; i++) {
-  const box = document.createElement("div");
-  box.style.width = size + "px";
-  box.style.height = size + "px";
-  box.style.backgroundColor = getRandomHexColor();
-  box.style.margin = "5px";
-  fragment.appendChild(box);
-  size += 10;
-}
+  for (let i = 0; i < amound; i++) {
+    const box = document.createElement("div");
+    box.style.width = size + "px";
+    box.style.height = size + "px";
+    box.style.backgroundColor = getRandomHexColor();
+    box.style.margin = "5px";
+    fragment.appendChild(box);
+    size += 10;
+  }
   boxesContainer.appendChild(fragment);
   input.value = "";
-})
+});
 
 destroyBtn.addEventListener("click", function () {
     boxesContainer.innerHTML = "";
